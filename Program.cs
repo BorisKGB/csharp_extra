@@ -7,3 +7,23 @@ while (i < inputArray.Length)
     i++;
 }
 
+string[] resultArray = new string[j];
+
+i = 0;
+j = 0;
+while (i < inputArray.Length)
+{
+    if (inputArray[i].Length <= lengthLimit)
+    {
+        resultArray[j] = inputArray[i];
+        j++;
+    }
+    i++;
+}
+
+if (resultArray.Length > 0)
+{
+    Console.WriteLine($"[\"{String.Join("\", \"", resultArray)}\"]");
+} else {
+    Console.WriteLine("[]");
+}
